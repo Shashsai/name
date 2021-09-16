@@ -1,0 +1,18 @@
+import os
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+
+fig, ax = plt.subplots()    
+width = 0.75 # the width of the bars 
+ind = np.arange(len(n))  # the x locations for the groups
+
+ax.barh(ind, n, width, color="purple")
+ax.set_yticks(ind+width/2)
+ax.set_yticklabels(m, minor=False)
+plt.title('title')
+plt.xlabel('x')
+plt.ylabel('y')      
+#plt.show()
+plt.savefig(os.path.join('test.png'), dpi=300, format='png', bbox_inches='tight')
